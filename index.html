@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>cipher vault · encrypt & decrypt</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="cipher-container">
+    <div class="header-section">
+      <div class="title">
+        <span>🔐</span> cipher vault
+      </div>
+      <div class="badge">AES-style</div>
+    </div>
+
+    <!-- Input area -->
+    <div class="input-panel">
+      <textarea 
+        id="userInput" 
+        class="text-input" 
+        placeholder="Enter text to encrypt or paste encrypted text to decrypt..."
+        autofocus
+      ></textarea>
+      
+      <div class="button-row">
+        <div class="btn-group">
+          <button class="encrypt-btn" id="encryptButton">
+            <span>🔒</span> Encrypt
+          </button>
+          <button class="decrypt-btn" id="decryptButton">
+            <span>🔓</span> Decrypt
+          </button>
+        </div>
+        <button class="clear-btn" id="clearButton">
+          <span>🗑️</span> Clear
+        </button>
+      </div>
+      <div class="char-indicator">
+        <span id="inputCharCount">0</span> characters
+      </div>
+    </div>
+
+    <!-- Output card that shows encrypted/decrypted text -->
+    <div class="output-card">
+      <div class="output-label">
+        <span id="outputModeIcon">🔒</span> 
+        <span id="outputModeLabel">RESULT</span>
+        <span class="mode-indicator" id="modeIndicator">encrypt mode</span>
+      </div>
+      <div class="result-text" id="resultOutput">
+        <span class="placeholder-text">Your result will appear here</span>
+      </div>
+      <div class="char-indicator" style="margin-top: 0.5rem;">
+        <span id="outputCharCount">—</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
